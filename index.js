@@ -1,8 +1,52 @@
-
 const navLinks = document.querySelectorAll(".nav-link")
+const innerCarousel = document.querySelector(".carousel-inner")
 
+const carouselItems = () => {
+
+    let allProjectsCard = [...Web.Cards, ...Mobile.Cards, ...Desktop.Cards, ...API.Cards]
+
+    // sort by date created
+    allProjectsCard = allProjectsCard
+                        .sort((a, b) => b.dateCreated - a.dateCreated)
+                        .map(card => card.element).join("\n")
+
+    return `
+    <div class="carousel-item active">
+        <div class="row d-flex justify-content-center">
+            ${allProjectsCard}
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="row d-flex justify-content-center">
+            ${Web.Projects()}
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="row d-flex justify-content-center">
+            ${Mobile.Projects()}
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="row d-flex justify-content-center">
+            ${Desktop.Projects()}
+        </div>
+    </div>
+
+    <div class="carousel-item">
+        <div class="row d-flex justify-content-center">
+            ${API.Projects()}
+        </div>
+    </div>
+    `
+}
+
+innerCarousel.innerHTML = carouselItems()
+
+//#region event listener for scrolling
 const scrollHeight = document.documentElement.scrollHeight
-
 window.addEventListener("scroll", () => {
     const rootElem = document.documentElement;
     const currentPos = window.scrollY || rootElem.scrollTop
@@ -31,23 +75,4 @@ window.addEventListener("scroll", () => {
         }
     })
 })
-
-// const homeAnchor = document.querySelector('#home-a')
-// const aboutMeAnchor = document.querySelector('#aboutme-a')
-// const projectAnchor = document.querySelector('#projects-a')
-// const contactMeAnchor = document.querySelector('#contactme-a')
-
-// const select = (invoker) => (e) => {
-//     const highlightedAnchor = document.querySelector(".selected")
-//     if (highlightedAnchor) {
-//         highlightedAnchor.classList.remove("selected")
-//         console.log(highlightedAnchor.classList)
-//     }
-
-//     invoker.classList.add("selected")
-// }
-
-// homeAnchor.addEventListener("click", select(homeAnchor))
-// aboutMeAnchor.addEventListener("click", select(aboutMeAnchor))
-// projectAnchor.addEventListener("click", select(projectAnchor))
-// contactMeAnchor.addEventListener("click", select(contactMeAnchor))
+//#endregion

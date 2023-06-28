@@ -8,7 +8,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 	<!-- custom css -->
-	<link rel="stylesheet" type="text/css" href="./index.css">
+	<link rel="stylesheet" href="./index.css">
 	<!-- title -->
 	<title>My Portfolio</title>
 	<!-- fonts -->
@@ -126,12 +126,21 @@
 						<!-- end: -->
 
 						<!-- item -->
-						<div class="col-md-12 text-center mt-5">
+						<div class="col-md-6 offset-lg-1 text-center mt-5">
 							<div class="lang-txt"> <i class="fa-solid fa-code"></i>
 								<h4>XML</h4>
 							</div>
 						</div>
 						<!-- end: -->
+
+						<!-- item -->
+						<div class="col-md-3 text-center mt-5">
+							<div class="lang-txt">
+								<img id="svg-languages" width="58px" height="58px" src="./images/jsx.svg">
+								<h4>JavaScript XML</h4>
+							</div>
+						</div>
+						<!-- item end -->
 					</div>
 				</div>
 				<!-- Frameworks & Tools -->
@@ -143,49 +152,71 @@
 					</div>
 
 					<div class="row mt-5">
+						<!-- ReactJS -->
+						<div class="col-md-4 text-center mt-5">
+							<div class="lang-txt">
+								<img id="svg-languages" width="85px" height="90px" src="./images/react.svg">
+								<h4>ReactJS</h4>
+							</div>
+						</div>
+						<!-- NoSQL -->
 						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img id="svg-languages" width="90px" height="90px" src="./images/NoSQL.svg">
 								<h4>NoSQL</h4>
 							</div>
 						</div>
+						<!-- MySQL -->
+						<div class="col-md-4 text-center mt-5">
+							<div class="lang-txt">
+								<img class="p-3" style="object-fit: scale-down;" id="svg-languages" width="100px" height="100px" src="./images/mysql.svg">
+								<h4>MySQL</h4>
+							</div>
+						</div>
+						<!-- NodeJS -->
 						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img id="svg-languages" width="100px" height="100px" src="./images/nodejs.svg">
 								<h4>NodeJS</h4>
 							</div>
 						</div>
+						<!-- ExpressJS -->
 						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img class="p-3" id="svg-languages" width="240px" height="100px" src="./images/expressJS.svg">
 								<h4>ExpressJS</h4>
 							</div>
 						</div>
+						<!-- MongoDB -->
 						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img id="svg-languages" width="100px" height="100px" src="./images/mongodb.svg">
 								<h4>MongoDB</h4>
 							</div>
 						</div>
+						<!-- FirebaseDB -->
 						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img id="svg-languages" width="100px" height="100px" src="./images/firebase.svg">
 								<h4>FirebaseDB</h4>
 							</div>
 						</div>
+						<!-- Bootstrap -->
 						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img class="p-3" id="svg-languages" width="100px" height="100px" src="./images/bootstrap.svg">
 								<h4>Bootstrap</h4>
 							</div>
 						</div>
-						<div class="col-md-4 offset-lg-2 text-center mt-5">
+						<!-- Android -->
+						<div class="col-md-4 text-center mt-5">
 							<div class="lang-txt">
 								<img style="object-fit: scale-down;" id="svg-languages" width="100px" height="100px" src="./images/android.svg">
 								<h4>Android</h4>
 							</div>
 						</div>
-						<div class="col-md-4 text-center mt-5">
+						<!-- Android Studio -->
+						<div class="col-md-12 text-center mt-5">
 							<div class="lang-txt">
 								<img class="p-3" style="object-fit: scale-down;" id="svg-languages" width="100px" height="100px" src="./images/androidstudio.svg">
 								<h4>Android Studio</h4>
@@ -207,79 +238,58 @@
 			</div>
 		</section>
 
+		<!-- projects section -->
 	    <section id="projects">
-	    	<div class="container-fluid text-center text-white p-5">
+
+			<!-- project filter buttons -->
+	    	<div class="text-center text-white pb-5">
 	    		<h4>My Projects</h4>
-	    		<div class="container">
-	    			<div class="row">
-						<div class="col-md-12 col-lg-4 d-flex flex-row justify-content-center mt-5">
-		    				<div class="card">
-						  		<img class="card-img-top" src="images/portfolio.png" alt="Card image cap">
-						  		<div class="card-body">
-						    		<h5 class="card-title">My Portfolio</h5>
-							    	<p class="card-text text-white">My website portfolio! Here, you'll find a collection of my latest and greatest projects</p>
-							    	<a href="https://github.com/DareAngeL/My-Portfolio" target="_blank" class="btn">See project</a>
-							  	</div>
-							</div>
-		    			</div>
+				<div id="proj-filterbtns-container" class="d-flex flex-wrap justify-content-center">
 
-						<div class="col-md-12 col-lg-4 d-flex flex-row justify-content-center mt-5">
-		    				<div class="card">
-						  		<img class="card-img-top" src="images/tmessenger-ui.jpg" alt="Card image cap">
-						  		<div class="card-body">
-						    		<h5 class="card-title">TMessager</h5>
-							    	<p class="card-text text-white">A personal messaging app for fast and secure communication with girlfriend. Share messages with ease.</p>
-							    	<a href="https://github.com/DareAngeL/TMessager" target="_blank" class="btn">See project</a>
-							  	</div>
-							</div>
-		    			</div>
+					<div class="proj-active rounded"></div>
 
-						<div class="col-md-12 col-lg-4 d-flex flex-row justify-content-center mt-5">
-		    				<div class="card">
-						  		<img class="card-img-top" src="images/graede-viewer.png" alt="Card image cap">
-						  		<div class="card-body">
-						    		<h5 class="card-title">Graede Viewer</h5>
-							    	<p class="card-text text-white">A Grade Viewer for Graede where students can view their grades online.</p>
-							    	<a href="https://github.com/DareAngeL/Graede-Viewer" target="_blank" class="btn">See project</a>
-							  	</div>
-							</div>
-		    			</div>
+					<div data-target="#proj-list-container" data-slide-to="0" class="d-flex justify-content-center m-1 active">
+						<div id="all" class="proj-btn-root">
+							<button class="projects-filter-btn rounded px-2">Desktop</button>
+							<label class="proj-lbl rounded">All</label>
+						</div>
+					</div>
 
-						<div class="col-md-12 col-lg-4 d-flex flex-row justify-content-center mt-5">
-		    				<div class="card">
-						  		<img class="card-img-top" src="images/graede550px.png" alt="Card image cap">
-						  		<div class="card-body">
-						    		<h5 class="card-title">Graede</h5>
-							    	<p class="card-text text-white">Graede brings all of your student grades in one place, making them instantly searchable and accessible from anywhere.</p>
-							    	<a href="https://github.com/DareAngeL/Graede" target="_blank" class="btn">See project</a>
-							  	</div>
-							</div>
-		    			</div>
+					<div data-target="#proj-list-container" data-slide-to="1" class="d-flex justify-content-center m-1">
+						<div id="web" class="proj-btn-root">
+							<button class="projects-filter-btn rounded px-2">Desktop</button>
+							<label class="proj-lbl rounded">Web</label>
+						</div>
+					</div>
 
-		    			<div class="col-md-12 col-lg-4 d-flex flex-row justify-content-center mt-5">
-		    				<div class="card">
-						  		<img class="card-img-top" src="images/Wifi-Management.png" alt="Card image cap">
-						  		<div class="card-body">
-						    		<h5 class="card-title">Tajos Wifi Management</h5>
-							    	<p class="card-text text-white">A simple app to easily manage my neighbours fee who connects to my Fiber WIFI. Monitor due dates and will notify me when due dates come.</p>
-							    	<a href="https://github.com/DareAngeL/Wifi-Management" target="_blank" class="btn">See project</a>
-							  	</div>
-							</div>
-		    			</div>
+					<div data-target="#proj-list-container" data-slide-to="2"  class="d-flex justify-content-center m-1">
+						<div id="mobile" class="proj-btn-root">
+							<button class="projects-filter-btn rounded px-2">Desktop</button>
+							<label class="proj-lbl rounded">Mobile</label>
+						</div>
+					</div>
 
-						<div class="col-md-12 col-lg-4 d-flex flex-row justify-content-center mt-5">
-		    				<div class="card">
-						  		<img class="card-img-top" src="images/iccnote550px.png" alt="Card image cap">
-						  		<div class="card-body">
-						    		<h5 class="card-title">ICC Notes</h5>
-							    	<p class="card-text text-white">Efficiently organize my school modules with my user-friendly note taking app.</p>
-							    	<a href="https://github.com/DareAngeL/ICC_Notes" target="_blank" class="btn">See project</a>
-							  	</div>
-							</div>
-		    			</div>
+					<div data-target="#proj-list-container" data-slide-to="3"  class="d-flex justify-content-center m-1">
+						<div id="desktop" class="proj-btn-root">
+							<button class="projects-filter-btn rounded px-2">Desktop</button>
+							<label class="proj-lbl rounded">Desktop</label>
+						</div>
+					</div>
 
-	    			</div>
+					<div data-target="#proj-list-container" data-slide-to="4"  class="d-flex justify-content-center m-1">
+						<div id="api" class="proj-btn-root">
+							<button class="projects-filter-btn rounded px-2">Desktop</button>
+							<label class="proj-lbl rounded">API</label>
+						</div>
+					</div>
 
+				</div>
+
+				<!-- project list -->  
+
+	    		<div id="proj-list-container" class="container carousel slide" data-interval="false">
+					<div class="carousel-inner">
+					</div>
 	    		</div>
 	    	</div>
 	    </section>
@@ -341,6 +351,12 @@
 
 	</div>
 
+<script type="text/javascript" src="./ProjectCard.js"></script>
+<script type="text/javascript" src="./projects/API.js"></script>
+<script type="text/javascript" src="./projects/Desktop.js"></script>
+<script type="text/javascript" src="./projects/Mobile.js"></script>	
+<script type="text/javascript" src="./projects/Web.js"></script>
+<script type="text/javascript" src="./IndicatorButtons.js"></script>
 <script type="text/javascript" src="./index.js"></script>
 <!-- Bootstrap Script -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
