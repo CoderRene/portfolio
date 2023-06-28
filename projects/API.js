@@ -1,3 +1,5 @@
+import ProjectCard from "../ProjectCard"
+
 const API = {
     Cards: [
         ProjectCard({
@@ -10,3 +12,5 @@ const API = {
     ],
     Projects: () => API.Cards.map(card => card.element).join("\n")
 }
+
+export default API

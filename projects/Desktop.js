@@ -1,3 +1,5 @@
+import ProjectCard from "../ProjectCard"
+
 const Desktop = {
     Cards: [
         ProjectCard({
@@ -10,3 +12,5 @@ const Desktop = {
     ],
     Projects: () => Desktop.Cards.map(card => card.element).join("\n")
 }
+
+export default Desktop

@@ -1,4 +1,4 @@
-const ProjectCard = ({imgSrc, title, description, projLink, dateCreated}) => {
+const ProjectCard = ({imgSrc, title, description, projLink, webLink, dateCreated}, isWebsite=false) => {
     return {
         dateCreated: dateCreated,
         element:`
@@ -8,10 +8,22 @@ const ProjectCard = ({imgSrc, title, description, projLink, dateCreated}) => {
                 <div class="card-body">
                     <h5 class="card-title">${title}</h5>
                     <p class="card-text text-white">${description}</p>
-                    <a href="${projLink}" target="_blank" class="btn">See project</a>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="${projLink}" target="_blank" class="btn">See project</a>
+                        </div>
+                        ${isWebsite ?  `
+                        <div class="col-12 mt-2">
+                            <a href="${webLink}" target="_blank" class="btn">Visit</a>
+                        </div>
+                        ` : ''}
+                    </div>
                 </div>
             </div>
         </div>
         `
     }
 }
+
+export default ProjectCard

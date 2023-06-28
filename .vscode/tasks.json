@@ -6,7 +6,7 @@
         {
             "label": "start-server",
             "type": "shell",
-            "command": "http-server dist/main.js"
+            "command": "http-server"
         }
     ]
 }

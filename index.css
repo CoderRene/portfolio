@@ -193,10 +193,6 @@ div > ul > .nav-item > a {
 	padding: 5px;
 }
 
-.carousel-item {
-	/* transform: translateX(35%); */
-}
-
 .proj-btn-root {
 	position: relative;
 	width: 85px;

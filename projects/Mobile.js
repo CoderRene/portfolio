@@ -1,3 +1,4 @@
+import ProjectCard from "../ProjectCard"
 
 const Mobile = {
     Cards: [
@@ -32,3 +33,5 @@ const Mobile = {
     ],
     Projects: () => Mobile.Cards.map(card => card.element).join("\n")
 }
+
+export default Mobile

@@ -1,3 +1,9 @@
+require("./IndicatorButtons")
+const { default: API } = require("./projects/API")
+const { default: Desktop } = require("./projects/Desktop")
+const { default: Mobile } = require("./projects/Mobile")
+const { default: Web } = require("./projects/Web")
+
 const navLinks = document.querySelectorAll(".nav-link")
 const innerCarousel = document.querySelector(".carousel-inner")
 
