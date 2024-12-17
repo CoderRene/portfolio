@@ -173,6 +173,28 @@ div > ul > .nav-item > a {
 	color: #FDFDFD !important;
 }
 
+/* #work-experience .divider {
+	width: 100vw;
+} */
+
+#work-experience .div1-head {
+	background-color: white;
+	height: 30px;
+	width: 30px;
+}
+
+#work-experience p {
+	font-size: .8rem;
+}
+
+#work-experience .div-tail {
+	background-color: #986BEB;
+	height: 12px;
+	width: 100%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 /*projects header*/
 #projects > div > h4 {
 	font-weight: bold;

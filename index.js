@@ -1,13 +1,13 @@
-require("./IndicatorButtons")
+// require("./components/IndicatorButtons")
 const { default: API } = require("./projects/API")
 const { default: Desktop } = require("./projects/Desktop")
 const { default: Mobile } = require("./projects/Mobile")
 const { default: Web } = require("./projects/Web")
 
 const navLinks = document.querySelectorAll(".nav-link")
-const innerCarousel = document.querySelector(".carousel-inner")
+const innerProjects = document.querySelector(".project-inner")
 
-const carouselItems = () => {
+const projectItems = () => {
 
     let allProjectsCard = [...Web.Cards, ...Mobile.Cards, ...Desktop.Cards, ...API.Cards]
 
@@ -17,39 +17,39 @@ const carouselItems = () => {
                         .map(card => card.element).join("\n")
 
     return `
-    <div class="carousel-item active">
+    <div>
         <div class="row d-flex justify-content-center">
             ${allProjectsCard}
-        </div>
-    </div>
-
-    <div class="carousel-item">
-        <div class="row d-flex justify-content-center">
-            ${Web.Projects()}
-        </div>
-    </div>
-
-    <div class="carousel-item">
-        <div class="row d-flex justify-content-center">
-            ${Mobile.Projects()}
-        </div>
-    </div>
-
-    <div class="carousel-item">
-        <div class="row d-flex justify-content-center">
-            ${Desktop.Projects()}
-        </div>
-    </div>
-
-    <div class="carousel-item">
-        <div class="row d-flex justify-content-center">
-            ${API.Projects()}
         </div>
     </div>
     `
 }
 
-innerCarousel.innerHTML = carouselItems()
+{/* <div class="carousel-item">
+    <div class="row d-flex justify-content-center">
+        ${Web.Projects()}
+    </div>
+</div>
+
+<div class="carousel-item">
+    <div class="row d-flex justify-content-center">
+        ${Mobile.Projects()}
+    </div>
+</div>
+
+<div class="carousel-item">
+    <div class="row d-flex justify-content-center">
+        ${Desktop.Projects()}
+    </div>
+</div>
+
+<div class="carousel-item">
+    <div class="row d-flex justify-content-center">
+        ${API.Projects()}
+    </div>
+</div> */}
+
+innerProjects.innerHTML = projectItems()
 
 //#region event listener for scrolling
 const scrollHeight = document.documentElement.scrollHeight
