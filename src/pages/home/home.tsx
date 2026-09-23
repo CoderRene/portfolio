@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronRight, Download, Github, Linkedin, Mail, Zap } from "lucide-react";
+import { ArrowRight, ChevronRight, Github, Linkedin, Mail, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 import Section from "../../common/components/ui/section";
@@ -384,14 +384,6 @@ export default function Home() {
                 </a>
               ))}
             </div>
-
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium border transition-all hover:bg-[#1A2030]"
-              style={{ borderColor: "rgba(41,121,255,0.25)", color: "#2979FF" }}
-            >
-              <Download size={14} /> Download Resume
-            </a>
           </div>
 
           {/* Right — form */}
